@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Contact Form</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body .containers {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="containers">
+
+        <h1>Contact form</h1>
+
+        <br>
+        <form action="contact-form.php" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="col-md-2 mb-3">
+                    <label>Title</label>
+                    <select class="custom-select mr-sm-2" name="title">
+                      <option selected></option>
+                      <option value="Mr.">Mr.</option>
+                      <option value="Mrs.">Mrs.</option>
+                      <option value="Ms.">Ms</option>
+                    </select>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label>First name</label>
+                    <input type="text" class="form-control" name="f_name" placeholder="First name" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid First Name.
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label>Last name</label>
+                    <input type="text" class="form-control" name="l_name" placeholder="Last name" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Last Name.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4 mb-3">
+                    <label>Date of Birth</label>
+                    <input type="date" max="2012-12-31" min="1900-01-01" class="form-control" name="__DOB">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label>Telephone No.</label>
+                    <input type="text" class="form-control" name="phone_no" placeholder="Telephone No." required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Phone no.
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <label>Email-ID</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="email_id" placeholder="Email-ID" aria-describedby="inputGroupPrepend3" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid Email id.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md mb-3">
+                    <label> File upload [Only PDF, Image formats]</label>
+                    <input type="file" accept=".jpg, .pdf, .png" class="form-control-file" name="file__upload">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md form-group mb-3">
+                    <label>Message</label>
+                    <textarea class="form-control" name="inputMessage" rows="3" maxlength="300"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </form>
+
+</body>
+
+</html>
